@@ -9,22 +9,26 @@ turnips_list = [0,'',0,0]
 turnip_id = 0000
 
 
+# Shows a list of available commands
 @bot.command()
 async def commands(ctx):
     await ctx.send("Type !turnips <price> to add your turnips to the price list.")
     await ctx.send("     (without the <> ) ")
     await ctx.send("Type !turnips with no additional parameters to view the top Turnip seller today.")
 
+# Returns a simple Yes or No
 @bot.command()
 async def yesno(ctx):
     decision = random.choice['yes', 'no']
     await ctx.send("Your answer is " + str(decision))
 
+# Returns a choice from a given list    
 @bot.command()
 async def choose(ctx, *args):
     decision = random.choice(args)
     await ctx.send("I have chosen " + decision)
 
+# Main Turnips Function
 @bot.command()
 async def turnips(ctx, arg = 0):
     global turnips_list
@@ -37,6 +41,7 @@ async def turnips(ctx, arg = 0):
         turnips_list[0] = 0
 
     if arg == "clear":
+        #FIXME: This does not work. Should reset to default values, not clear.
         turnips_list.clear()
         await ctx.send("Turnip price list cleared.")
     elif arg != 0:
