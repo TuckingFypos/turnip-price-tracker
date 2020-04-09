@@ -32,6 +32,10 @@ Checking Turnip Prices:
 
 ## Release History
 
+* April 9, 2020
+   * Added Issue Tracking to the repo
+   * Added Sponsorhip links to the top-bar
+
 * April 8, 2020
     * Work in progress
     * Tracks basic Turnip Sale prices daily
