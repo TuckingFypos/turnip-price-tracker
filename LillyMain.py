@@ -3,9 +3,11 @@ import discord
 from discord.ext import commands
 import random
 import RoseSecrets
+import copy
 
 bot = commands.Bot(command_prefix='!')
 turnips_list = [0,'',0,0]
+turnips_initial = copy.deepcopy(turnips_list)
 turnip_id = 0000
 
 
@@ -41,8 +43,8 @@ async def turnips(ctx, arg = 0):
         turnips_list[0] = 0
 
     if arg == "clear":
-        #FIXME: This does not work. Should reset to default values, not clear.
-        turnips_list.clear()
+        # Sets turnips_list to its initial values
+        turnips_list = copy.deepcopy(turnips_initial)
         await ctx.send("Turnip price list cleared.")
     elif arg != 0:
         price = int(arg)
