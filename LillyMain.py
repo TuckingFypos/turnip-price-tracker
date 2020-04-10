@@ -41,8 +41,8 @@ async def turnips(ctx, arg = 0):
         turnips_list[0] = 0
 
     if arg == "clear":
-        #FIXME: This does not work. Should reset to default values, not clear.
-        turnips_list.clear()
+        # Sets turnips_list to its initial values (given they don't change)
+        turnips_list[0:4] = 0, '', 0, 0
         await ctx.send("Turnip price list cleared.")
     elif arg != 0:
         price = int(arg)
