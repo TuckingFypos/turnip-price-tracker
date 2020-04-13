@@ -32,6 +32,10 @@ Checking Turnip Prices:
 
 ## Release History
 
+* April 13, 2020
+  * Fixed timekeeping to reflect the Noon price reset
+  * Fixed the Clear function thanks to some community help
+
 * April 9, 2020
    * Added Issue Tracking to the repo
    * Added Sponsorship links to the top-bar
