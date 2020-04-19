@@ -33,8 +33,8 @@ Checking Turnip Prices:
 ## Release History
 
 * April 19, 2020
- * Fixed the calculation for Sundays, buy days now seek out the lowest price
- * Somehow broke the Clear function again. Must investigate...
+  * Fixed the calculation for Sundays, buy days now seek out the lowest price
+  * Somehow broke the Clear function again. Must investigate...
  
 
 * April 13, 2020
