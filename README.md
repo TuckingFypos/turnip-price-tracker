@@ -32,6 +32,11 @@ Checking Turnip Prices:
 
 ## Release History
 
+* April 22, 2020
+  * Implemented Cogs
+  * Fixed the Clear function (for real this time)
+  * Fixed the Choose command
+
 * April 19, 2020
   * Fixed the calculation for Sundays, buy days now seek out the lowest price
   * Somehow broke the Clear function again. Must investigate...
