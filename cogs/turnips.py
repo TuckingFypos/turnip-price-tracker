@@ -1,19 +1,22 @@
+import discord
 from discord.ext import commands
 import datetime
 import random
 import time
 
-turnips_list = [0,'',0,0,0]
+turnips_list = [0, '', 0, 0, 0]
 turnip_id = 0000
 
+
 class Gaming(commands.Cog):
+
 
     def __init__(self, bot):
         self.bot = bot
 
     # Main Turnips Function
     @commands.group(description='Turnips Econonmy', name="turnips", invoke_without_command=True)
-    async def turnips(self, ctx, arg = 0):
+    async def turnips(self, ctx, arg=0):
         global turnips_list
         today = datetime.date.today()
         today_day = today.day
@@ -45,8 +48,15 @@ class Gaming(commands.Cog):
 
         elif arg == 0:
             if turnips_list[3] is today_day:
-                #TODO: Format this announcement as a code-block in Discord.
-                await ctx.send("Highest current price is: " + str(turnips_list[0]) + " bells. From: " + str(turnips_list[1]))
+                # Embed
+                embed = discord.Embed(
+                    title='Highest Current Price',
+                    colour=discord.Colour.blue()
+                )
+                embed.set_thumbnail(url='https://vignette.wikia.nocookie.net/animalcrossing/images/8/85/Daisy_Mae.png')
+                embed.add_field(name='Price in Bells:', value=str(turnips_list[0]), inline=True)
+                embed.add_field(name='From:', value=str(turnips_list[1]), inline=True)
+                await ctx.send(embed=embed)
             else:
                 await ctx.send("No turnip prices registered for today. ")
 
@@ -63,8 +73,9 @@ class Gaming(commands.Cog):
     async def help(self, ctx):
         await ctx.send("Can't help you yet.")
 
-        #TODO: Send a 15-min warning message to the Switch channel at 9:45PM EST that the shop is about to close
-        #TODO: Create a help command that explains the Turnip economy and why the bot exists
+        # TODO: Send a 15-min warning message to the Switch channel at 9:45PM EST that the shop is about to close
+        # TODO: Create a help command that explains the Turnip economy and why the bot exists
+
 
 def setup(bot):
     bot.add_cog(Gaming(bot))
