@@ -40,11 +40,12 @@ class Gaming(commands.Cog):
         #Use RE to cut the question out of the arg String
         raw_question = re.search(r'^(.+[?])', arg)
         #Assign the capture group to options
-        question = raw_question.groups()
+        question = raw_question.group()
         #Use RE to cut the options out of the arg String
-        raw_solutions = re.match(r'[?]\s(.+)$', arg)
+        raw_solutions = re.search(r'[?]\s(.+)$', arg)
+        solution_group = raw_solutions.group(1)
         #Format the options into a List by splitting the String
-        options = str(raw_solutions.group(1).split(','))
+        options = solution_group.split(',')
 
         if len(options) <= 1:
             await ctx.send('You need more than one option to make a poll!')
