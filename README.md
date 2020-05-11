@@ -33,9 +33,9 @@ Checking Turnip Prices:
 ## Release History
 
 * May 11, 2020
- * Implemented !rollNdN to roll a dice
- * Implemented a formatted embed for the !turnips price return
- * Implemented !quickpoll 
+  * Implemented !rollNdN to roll a dice
+  * Implemented a formatted embed for the !turnips price return
+  * Implemented !quickpoll 
 
 * April 22, 2020
   * Implemented Cogs
