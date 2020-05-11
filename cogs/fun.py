@@ -38,7 +38,9 @@ class Gaming(commands.Cog):
     @commands.command()
     async def quickpoll(self, ctx, arg: str):
         #Use RE to cut the question out of the arg String
-        question = re.match(r'^(.+[?])', arg)
+        raw_question = re.match(r'^(.+[?])', arg)
+        #Assign the capture group to options
+        options = str(raw_question.groups(1))
         #Use RE to cut the options out of the arg String
         raw_solutions = re.match(r'[?]\s(.+)$', arg)
         #Format the options into a List by splitting the String
