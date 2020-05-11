@@ -38,13 +38,13 @@ class Gaming(commands.Cog):
     @commands.command()
     async def quickpoll(self, ctx, arg: str):
         #Use RE to cut the question out of the arg String
-        raw_question = re.match(r'^(.+[?])', arg)
+        raw_question = re.search(r'^(.+[?])', arg)
         #Assign the capture group to options
-        options = str(raw_question.groups(1))
+        question = raw_question.groups()
         #Use RE to cut the options out of the arg String
         raw_solutions = re.match(r'[?]\s(.+)$', arg)
         #Format the options into a List by splitting the String
-        options = str(raw_solutions.groups(1)).split(',')
+        options = str(raw_solutions.group(1).split(','))
 
         if len(options) <= 1:
             await ctx.send('You need more than one option to make a poll!')
