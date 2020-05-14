@@ -44,13 +44,14 @@ class Slap(commands.Cog):
 
 		if arsenal_roll > 0:
 			if arsenal_roll < counter_roll:
-				await ctx.send("{} attempts to slap {} with {}...").format()
+				await ctx.send("{} attempts to slap {} with {}...".format(player1, player2, p1weapon))
+				await ctx.send("...but {} parried, and countered with {}".format(player2, p2weapon))
 
 			elif arsenal_roll > counter_roll:
-				await ctx.send("{} slaps {} with {}.".format(player1, player2, weapon))
+				await ctx.send("{} slaps {} with {}.".format(player1, player2, p1weapon))
 
 			elif arsenal_roll == counter_roll:
-				await ctx.send("")
+				await ctx.send("{} attempts to slap {} with {}, but {} guarded with {}!".format(player1, player2, p1weapon, player2, p2weapon))
 		else:
 			await ctx.send("{} attempted to slap {}, but they missed.".format(player1, player2))
 			
