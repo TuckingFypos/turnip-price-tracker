@@ -12,7 +12,7 @@ class Slap(commands.Cog):
 
 	@commands.command()
 	async def initialize(self, ctx):
-
+		print("")
 
 	@commands.command()
 	async def slap(self, ctx, member: discord.Member):
@@ -21,7 +21,7 @@ class Slap(commands.Cog):
 		player2 = member.name
 		#load the game database
 		# with open (jsonpath) as player_database:
-		aresnal_roll = random.randrange(0, 3)
+		arsenal_roll = random.randrange(0, 3)
 		counter_roll = random.randrange(0, 3)
 
 		small_weapons = ["a rusty spoon", "a smelly fish", "a wet noodle", "a broken bottle", "a paper fan"]
@@ -30,9 +30,9 @@ class Slap(commands.Cog):
 
 		if arsenal_roll is 1:
 			p1weapon = random.choice(small_weapons)
-		if aresnal_roll is 2:
+		elif arsenal_roll is 2:
 			p1weapon = random.choice(medium_weapons)
-		if aresnal_roll is 3:
+		if arsenal_roll is 3:
 			p1weapon = random.choice(large_weapons)
 
 		if counter_roll is 1:
