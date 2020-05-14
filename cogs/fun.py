@@ -36,7 +36,7 @@ class Gaming(commands.Cog):
 
     #Creates a Quickpoll
     @commands.command()
-    async def quickpoll(self, ctx, arg: str):
+    async def quickpoll(self, ctx, arg):
         #Use RE to cut the question out of the arg String
         raw_question = re.search(r'^(.+[?])', arg)
         #Assign the capture group to options
