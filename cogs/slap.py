@@ -55,4 +55,4 @@ class Slap(commands.Cog):
 			await ctx.send("{} attempted to slap {}, but they missed.".format(player1, player2))
 			
 def setup(bot):
-    bot.add_cog(Slap(bot))
+	bot.add_cog(Slap(bot))
