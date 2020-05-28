@@ -3,6 +3,7 @@
 
 The chatbot lives persistently on a networked Raspberry Pi 3 B+, and takes in user-submitted Turnip prices on a day-to-day basis. These prices are compared user to user, and the top price can be called so any member can see the best place to visit if they'd like to sell their Turnips for profit.  
 
+The bot also has other miscellaneous Discord functionality, which can be triggered by users with the !command, and are all visible to you in the /cogs directory of this repo. 
 
 ## Installation
 
