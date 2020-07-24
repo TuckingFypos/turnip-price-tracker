@@ -34,7 +34,7 @@ Checking Turnip Prices:
 ## Release History
 
 * July 24, 2020
-  * Implemented !Xur with the help of [@NotDisliked](https://twitter.com/NotDisliked), developer of [WhereTheFIsXur](wtfix.gg). 
+  * Implemented !Xur with the help of [@NotDisliked](https://twitter.com/NotDisliked), developer of [WhereTheFIsXur](https://www.wtfix.gg). 
 
 * May 11, 2020
   * Implemented !rollNdN to roll a dice
