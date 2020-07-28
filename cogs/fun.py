@@ -66,11 +66,11 @@ class Gaming(commands.Cog):
             title=question,
             description=''.join(description)
         )
-        embed.set_footer(text='Poll ID: {}'.format(react_message.id))
         react_message = await ctx.send(embed=embed)
+        embed.set_footer(text='Poll ID: {}'.format(react_message.id))
         for emoji in reactions[:len(options)]:
             await react_message.add_reaction(emoji)
-        await react_message.edit(react_message, embed=embed)
+        await react_message.edit(embed=embed)
 
 def setup(bot):
     bot.add_cog(Gaming(bot))
