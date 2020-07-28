@@ -15,7 +15,7 @@ class Destiny(commands.Cog):
         # Loads the returned JSON to a python dict
         xur_info = json.loads(r.text)
         # Checks if Xur is found
-        if xur_info['found']:
+        if 'found' in xur_info:
             # If found, prints Xur's location to a Discord Embed
             embed = discord.Embed(
                 title='Xur Located',
@@ -33,7 +33,6 @@ class Destiny(commands.Cog):
             embed.add_field(name='Planet:', value="unknown", inline=True)
             embed.add_field(name='Zone:', value="unknown", inline=True)
             await ctx.send(embed=embed)
-
 
 def setup(bot):
     bot.add_cog(Destiny(bot))
