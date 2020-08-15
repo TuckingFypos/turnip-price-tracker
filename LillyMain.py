@@ -2,7 +2,7 @@ import os
 import RoseSecrets
 from discord.ext import commands
 
-bot = commands.Bot(command_prefix = '!')
+bot = commands.Bot(command_prefix = '!', case_insensitive=True)
 
 # Loads all Cogs in cogs folder
 for filename in os.listdir('./cogs'):
